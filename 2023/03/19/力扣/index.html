@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>力扣刷题记录 | 一颗卷心菜</title><meta name="author" content="Cabbage"><meta name="copyright" content="Cabbage"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="LeetCode 751768. 交替合并字符串-简单题目描述：给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。返回合并后的字符串 。  示例 1：  输入：word1 &#x3D; “abc”, word2 &#x3D; “pqr”输出：”apbqcr”解释：字符串合并">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>力扣刷题记录 | 一颗卷心菜</title><meta name="author" content="Cabbage"><meta name="copyright" content="Cabbage"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="LeetCode 751768. 交替合并字符串-简单题目描述：给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。返回合并后的字符串 。 - 示例 1：  输入：word1 &#x3D; &quot;abc&quot;, word2 &#x3D; &quot;pqr&quot; 输出：&quot;apbqcr&quot; 解释：字符串合并情况如下所示：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="力扣刷题记录">
 <meta property="og:url" content="https://cabbage-blog.github.io/2023/03/19/%E5%8A%9B%E6%89%A3/index.html">
 <meta property="og:site_name" content="一颗卷心菜">
-<meta property="og:description" content="LeetCode 751768. 交替合并字符串-简单题目描述：给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。返回合并后的字符串 。  示例 1：  输入：word1 &#x3D; “abc”, word2 &#x3D; “pqr”输出：”apbqcr”解释：字符串合并">
+<meta property="og:description" content="LeetCode 751768. 交替合并字符串-简单题目描述：给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。返回合并后的字符串 。 - 示例 1：  输入：word1 &#x3D; &quot;abc&quot;, word2 &#x3D; &quot;pqr&quot; 输出：&quot;apbqcr&quot; 解释：字符串合并情况如下所示：">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cabbage-blog.github.io/img/Bg2.jpg">
 <meta property="article:published_time" content="2023-03-19T06:18:31.000Z">
-<meta property="article:modified_time" content="2023-05-29T08:42:38.986Z">
+<meta property="article:modified_time" content="2023-05-29T08:53:47.268Z">
 <meta property="article:author" content="Cabbage">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cabbage-blog.github.io/img/Bg2.jpg"><link rel="shortcut icon" href="/img/Cat2.jpg"><link rel="canonical" href="https://cabbage-blog.github.io/2023/03/19/%E5%8A%9B%E6%89%A3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-JYFH38DCHR"></script><script>window.dataLayer = window.dataLayer || [];
@@ -60,7 +60,7 @@ gtag('config', 'G-JYFH38DCHR');
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2023-05-29 16:42:38'
+  postUpdate: '2023-05-29 16:53:47'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -180,128 +180,193 @@ window.addEventListener('load',()=> { preloader.endLoading() })
 if (false) {
   document.addEventListener('pjax:send', () => { preloader.initLoading() })
   document.addEventListener('pjax:complete', () => { preloader.endLoading() })
-}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Cat.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/Bg2.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="一颗卷心菜"><span class="site-name">一颗卷心菜</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">力扣刷题记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-19T06:18:31.000Z" title="发表于 2023-03-19 14:18:31">2023-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-29T08:42:38.986Z" title="更新于 2023-05-29 16:42:38">2023-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8A%9B%E6%89%A3/">力扣</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="力扣刷题记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="LeetCode-75"><a href="#LeetCode-75" class="headerlink" title="LeetCode 75"></a>LeetCode 75</h1><h2 id="1768-交替合并字符串-简单"><a href="#1768-交替合并字符串-简单" class="headerlink" title="1768. 交替合并字符串-简单"></a>1768. 交替合并字符串-简单</h2><p><em>题目描述：</em>给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。<br>如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。返回合并后的字符串 。</p>
-<ul>
-<li>示例 1：</li>
-</ul>
-<p>输入：word1 &#x3D; “abc”, word2 &#x3D; “pqr”<br>输出：”apbqcr”<br>解释：字符串合并情况如下所示：<br>word1：  a   b   c<br>word2：    p   q   r<br>合并后：  a p b q c r</p>
-<ul>
-<li>示例 2：</li>
-</ul>
-<p>输入：word1 &#x3D; “ab”, word2 &#x3D; “pqrs”<br>输出：”apbqrs”<br>解释：注意，word2 比 word1 长，”rs” 需要追加到合并后字符串的末尾。<br>word1：  a   b<br>word2：    p   q   r   s<br>合并后：  a p b q   r   s</p>
-<ul>
-<li>示例 3：</li>
-</ul>
-<p>输入：word1 &#x3D; “abcd”, word2 &#x3D; “pq”<br>输出：”apbqcd”<br>解释：注意，word1 比 word2 长，”cd” 需要追加到合并后字符串的末尾。<br>word1：  a   b   c   d<br>word2：    p   q<br>合并后：  a p b q c   d</p>
+}</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Cat.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">1</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/Bg2.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="一颗卷心菜"><span class="site-name">一颗卷心菜</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 文章</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">力扣刷题记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-19T06:18:31.000Z" title="发表于 2023-03-19 14:18:31">2023-03-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-29T08:53:47.268Z" title="更新于 2023-05-29 16:53:47">2023-05-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%8A%9B%E6%89%A3/">力扣</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="力扣刷题记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="LeetCode-75"><a href="#LeetCode-75" class="headerlink" title="LeetCode 75"></a>LeetCode 75</h1><h2 id="1768-交替合并字符串-简单"><a href="#1768-交替合并字符串-简单" class="headerlink" title="1768. 交替合并字符串-简单"></a>1768. 交替合并字符串-简单</h2><p><em>题目描述：</em>给你两个字符串 word1 和 word2 。请你从 word1 开始，通过交替添加字母来合并字符串。<br>如果一个字符串比另一个字符串长，就将多出来的字母追加到合并后字符串的末尾。返回合并后的字符串 。</p>
+<pre class="language-markup" data-language="markup"><code class="language-markup">- 示例 1：
+
+输入：word1 = "abc", word2 = "pqr"
+输出："apbqcr"
+解释：字符串合并情况如下所示：
+word1：  a   b   c
+word2：    p   q   r
+合并后：  a p b q c r
+
+- 示例 2：
+
+输入：word1 = "ab", word2 = "pqrs"
+输出："apbqrs"
+解释：注意，word2 比 word1 长，"rs" 需要追加到合并后字符串的末尾。
+word1：  a   b 
+word2：    p   q   r   s
+合并后：  a p b q   r   s
+
+- 示例 3：
+
+输入：word1 = "abcd", word2 = "pq"
+输出："apbqcd"
+解释：注意，word1 比 word2 长，"cd" 需要追加到合并后字符串的末尾。
+word1：  a   b   c   d
+word2：    p   q 
+合并后：  a p b q c   d</code></pre>
+
+
 <ul>
 <li>思路与算法：</li>
 </ul>
-<p>使用双指针：使两个指针i,j分别同时指向word1和word2的头部<br>如果i没有超过word1的范围，存入答案中，右移一位<br>如果j没有超过word2的范围，存入答案中，右移一位<br>当两者都超过了范围，退出循环</p>
+<blockquote>
+<ul>
+<li>使用双指针：使两个指针i,j分别同时指向word1和word2的头部</li>
+</ul>
+</blockquote>
+<ul>
+<li>如果i没有超过word1的范围，存入答案中，右移一位<br>如果j没有超过word2的范围，存入答案中，右移一位<br>当两者都超过了范围，退出循环</li>
+</ul>
 <p>代码实现：</p>
-<pre class="language-none"><code class="language-none">class Solution &#123;
-    public String mergeAlternately(String word1, String word2) &#123;
-        int m &#x3D; word1.length(), n &#x3D; word2.length();
-        int i &#x3D; 0, j &#x3D; 0;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">mergeAlternately</span><span class="token punctuation">(</span><span class="token class-name">String</span> word1<span class="token punctuation">,</span> <span class="token class-name">String</span> word2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> m <span class="token operator">=</span> word1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> n <span class="token operator">=</span> word2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
-        StringBuilder ans &#x3D; new StringBuilder();
-        while (i &lt; m || j &lt; n) &#123;
-            if (i &lt; m) &#123;
-                ans.append(word1.charAt(i));
-                ++i;
-            &#125;
-            if (j &lt; n) &#123;
-                ans.append(word2.charAt(j));
-                ++j;
-            &#125;
-        &#125;
-        return ans.toString();
-    &#125;
-&#125;</code></pre>
+        <span class="token class-name">StringBuilder</span> ans <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringBuilder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> m <span class="token operator">||</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> m<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                ans<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>word1<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token operator">++</span>i<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">&lt;</span> n<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+                ans<span class="token punctuation">.</span><span class="token function">append</span><span class="token punctuation">(</span>word2<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token operator">++</span>j<span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> ans<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 <h2 id="1071-字符串的最大公因子-简单"><a href="#1071-字符串的最大公因子-简单" class="headerlink" title="1071. 字符串的最大公因子-简单"></a>1071. 字符串的最大公因子-简单</h2><p><em>题目描述：</em>对于字符串 s 和 t，只有在 s &#x3D; t + … + t（t 自身连接 1 次或多次）时，我们才认定 “t 能除尽 s”。<br>给定两个字符串 str1 和 str2 。返回 最长字符串 x，要求满足 x 能除尽 str1 且 x 能除尽 str2 。</p>
-<p>示例 1：</p>
-<p>输入：str1 &#x3D; “ABCABC”, str2 &#x3D; “ABC”<br>输出：”ABC”</p>
-<p>示例 2：</p>
-<p>输入：str1 &#x3D; “ABABAB”, str2 &#x3D; “ABAB”<br>输出：”AB”</p>
-<p>示例 3：</p>
-<p>输入：str1 &#x3D; “LEET”, str2 &#x3D; “CODE”<br>输出：””</p>
+<pre class="language-none"><code class="language-none">示例 1：
+
+输入：str1 &#x3D; &quot;ABCABC&quot;, str2 &#x3D; &quot;ABC&quot;
+输出：&quot;ABC&quot;
+
+示例 2：
+
+输入：str1 &#x3D; &quot;ABABAB&quot;, str2 &#x3D; &quot;ABAB&quot;
+输出：&quot;AB&quot;
+
+示例 3：
+
+输入：str1 &#x3D; &quot;LEET&quot;, str2 &#x3D; &quot;CODE&quot;
+输出：&quot;&quot;</code></pre>
+
 <p>思路与算法：</p>
+<blockquote>
 <ul>
 <li>判断是否是公约数（使用concat方法）</li>
+</ul>
+</blockquote>
+<ul>
 <li>使用辗转相除法，当word1(a)的长度取余word2(b)，即变量remainder的长度不为0，<br>令a&#x3D;b,b&#x3D;remainder，remainder&#x3D;a%b，循环结束后，返回b，最后截取word1中0到b的字符串既是最大公约数</li>
 </ul>
 <p>代码实现：</p>
 <blockquote>
 <p>concat():将几个字符串连接到一起。<br>例如：s &#x3D; s.concat(str1);&#x2F;&#x2F;将字符串str1接到字符串s后面</p>
 </blockquote>
-<pre class="language-none"><code class="language-none">class Solution &#123;
-  public String gcdOfStrings(String str1, String str2) &#123;
-        if (!str1.concat(str2).equals(str2.concat(str1))) &#123;
-            return &quot;&quot;;
-        &#125;
-        return str1.substring(0, gcd(str1.length(), str2.length()));
-    &#125;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">gcdOfStrings</span><span class="token punctuation">(</span><span class="token class-name">String</span> str1<span class="token punctuation">,</span> <span class="token class-name">String</span> str2<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>str1<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>str2<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>str2<span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>str1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> str1<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token function">gcd</span><span class="token punctuation">(</span>str1<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> str2<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-    public int gcd(int a, int b) &#123;
-        int remainder &#x3D; a % b;
-        while (remainder !&#x3D; 0) &#123;
-            a &#x3D; b;
-            b &#x3D; remainder;
-            remainder &#x3D; a % b;
-        &#125;
-        return b;
-    &#125;
-&#125;</code></pre>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">gcd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> remainder <span class="token operator">=</span> a <span class="token operator">%</span> b<span class="token punctuation">;</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>remainder <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            a <span class="token operator">=</span> b<span class="token punctuation">;</span>
+            b <span class="token operator">=</span> remainder<span class="token punctuation">;</span>
+            remainder <span class="token operator">=</span> a <span class="token operator">%</span> b<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> b<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 <h2 id="1431-拥有最多糖果的孩子-简单"><a href="#1431-拥有最多糖果的孩子-简单" class="headerlink" title="1431. 拥有最多糖果的孩子-简单"></a>1431. 拥有最多糖果的孩子-简单</h2><p><em>题目描述：</em>给你一个数组 candies 和一个整数 extraCandies ，其中 candies[i] 代表第 i 个孩子拥有的糖果数目。<br>对每一个孩子，检查是否存在一种方案，将额外的 extraCandies 个糖果分配给孩子们之后，此孩子有 最多 的糖果。<br>注意，允许有多个孩子同时拥有最多的糖果数目。</p>
-<p>示例 1：</p>
-<p>输入：candies &#x3D; [2,3,5,1,3], extraCandies &#x3D; 3<br>输出：[true,true,true,false,true]<br>解释：<br>孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最多糖果的孩子。<br>孩子 2 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。<br>孩子 3 有 5 个糖果，他已经是拥有最多糖果的孩子。<br>孩子 4 有 1 个糖果，即使他得到所有额外的糖果，他也只有 4 个糖果，无法成为拥有糖果最多的孩子。<br>孩子 5 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。</p>
-<p>示例 2：</p>
-<p>输入：candies &#x3D; [4,2,1,1,2], extraCandies &#x3D; 1<br>输出：[true,false,false,false,false]<br>解释：只有 1 个额外糖果，所以不管额外糖果给谁，只有孩子 1 可以成为拥有糖果最多的孩子。</p>
-<p>示例 3：</p>
-<p>输入：candies &#x3D; [12,1,12], extraCandies &#x3D; 10<br>输出：[true,false,true]</p>
+<pre class="language-none"><code class="language-none">示例 1：
+
+输入：candies &#x3D; [2,3,5,1,3], extraCandies &#x3D; 3
+输出：[true,true,true,false,true] 
+解释：
+孩子 1 有 2 个糖果，如果他得到所有额外的糖果（3个），那么他总共有 5 个糖果，他将成为拥有最多糖果的孩子。
+孩子 2 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。
+孩子 3 有 5 个糖果，他已经是拥有最多糖果的孩子。
+孩子 4 有 1 个糖果，即使他得到所有额外的糖果，他也只有 4 个糖果，无法成为拥有糖果最多的孩子。
+孩子 5 有 3 个糖果，如果他得到至少 2 个额外糖果，那么他将成为拥有最多糖果的孩子。
+
+示例 2：
+
+输入：candies &#x3D; [4,2,1,1,2], extraCandies &#x3D; 1
+输出：[true,false,false,false,false] 
+解释：只有 1 个额外糖果，所以不管额外糖果给谁，只有孩子 1 可以成为拥有糖果最多的孩子。
+
+示例 3：
+
+输入：candies &#x3D; [12,1,12], extraCandies &#x3D; 10
+输出：[true,false,true]</code></pre>
+
 <p>思路与算法：</p>
+<blockquote>
+<p>-取出数组中最大糖果数</p>
+</blockquote>
 <ul>
-<li>取出数组中最大糖果数</li>
-<li>循环遍历数组，若遍历到的值与额外糖果数相加小于最大糖果数，<br>则将false存入集合中，否则将true存入集合中,返回集合即可。</li>
+<li>循环遍历数组，若遍历到的值与额外糖果数相加小于最大糖果数，则将false存入集合中，否则将true存入集合中,返回集合即可。</li>
 </ul>
 <p>代码实现：</p>
-<pre class="language-none"><code class="language-none">class Solution &#123;
-    public  int max(int[] candies)&#123;
-        int max&#x3D;0;
-        for (int i&#x3D;0;i&lt;candies.length;i++)&#123;
-            if (candies[i]&gt;max)&#123;
-                max&#x3D;candies[i];
-            &#125;
-        &#125;
-        return max;
-    &#125;
-    public List&lt;Boolean&gt; kidsWithCandies(int[] candies, int extraCandies) &#123;
-        Solution solution &#x3D; new Solution();
-        int max &#x3D; solution.max(candies);
-        int len&#x3D;candies.length;
-        List&lt;Boolean&gt; list &#x3D; new ArrayList&lt;&gt;();
-            for(int i&#x3D;0;i&lt;len;i++)&#123;
-                if(candies[i]+extraCandies&lt;max)&#123;
-                    list.add(false);
-                &#125;else &#123;
-                    list.add(true);
-                &#125;
-            &#125;
-        return list;
-    &#125;
-    &#125;</code></pre>
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">public</span>  <span class="token keyword">int</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> candies<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">int</span> max<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>candies<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>candies<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">></span>max<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                max<span class="token operator">=</span>candies<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> max<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">></span></span> <span class="token function">kidsWithCandies</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> candies<span class="token punctuation">,</span> <span class="token keyword">int</span> extraCandies<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">Solution</span> solution <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Solution</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> max <span class="token operator">=</span> solution<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>candies<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len<span class="token operator">=</span>candies<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>candies<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span>extraCandies<span class="token operator">&lt;</span>max<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+                    list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
+        <span class="token keyword">return</span> list<span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span></code></pre>
 
 
 
 <h2 id="605-种花问题-简单"><a href="#605-种花问题-简单" class="headerlink" title="605. 种花问题-简单"></a>605. 种花问题-简单</h2><p>题目描述：<br>假设有一个很长的花坛，一部分地块种植了花，另一部分却没有。<br>可是，花不能种植在相邻的地块上，它们会争夺水源，两者都会死去。<br>给你一个整数数组 flowerbed 表示花坛，由若干 0 和 1 组成，其中 0 表示没种植花，1 表示种植了花。<br>另有一个数 n ，能否在不打破种植规则的情况下种入 n 朵花？能则返回 true ，不能则返回 false 。</p>
-<p>示例 1：</p>
-<p>输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 1<br>输出：true</p>
-<p>示例 2：</p>
-<p>输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 2<br>输出：false</p>
+<pre class="language-none"><code class="language-none">示例 1：
+
+输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 1
+输出：true
+
+示例 2：
+
+输入：flowerbed &#x3D; [1,0,0,0,1], n &#x3D; 2
+输出：false
+</code></pre>
+
 <p>思路与算法：</p>
+<blockquote>
 <ul>
 <li>循环坑位</li>
+</ul>
+</blockquote>
+<ul>
 <li>种花条件：坑的上一个和下一个坑位为0才能种花，当指针在第一个坑位时，下一个坑位为0，当指针在最后一个坑位时，上一个坑位为0</li>
 </ul>
 <p>代码实现：</p>
@@ -324,46 +389,56 @@ if (false) {
 
 <h2 id="345-反转字符串中的元音字母-简单"><a href="#345-反转字符串中的元音字母-简单" class="headerlink" title="345. 反转字符串中的元音字母-简单"></a>345. 反转字符串中的元音字母-简单</h2><p>题目描述：</p>
 <p>给你一个字符串 s ，仅反转字符串中的所有元音字母，并返回结果字符串。<br>元音字母包括 ‘a’、’e’、’i’、’o’、’u’，且可能以大小写两种形式出现不止一次。</p>
-<p>示例 1：</p>
-<p>输入：s &#x3D; “hello”<br>输出：”holle”</p>
-<p>示例 2：</p>
-<p>输入：s &#x3D; “leetcode”<br>输出：”leotcede”</p>
+<pre class="language-none"><code class="language-none">示例 1：
+
+输入：s &#x3D; &quot;hello&quot;
+输出：&quot;holle&quot;
+
+示例 2：
+
+输入：s &#x3D; &quot;leetcode&quot;
+输出：&quot;leotcede&quot;</code></pre>
+
 <p>思路和算法：</p>
+<blockquote>
 <ul>
 <li>使用双指针，i指向第一个字符，j指向最后一个字符</li>
+</ul>
+</blockquote>
+<ul>
 <li>当i,j同时指向元音字母时，交换位置，i右移，j左移，否则i右移或者j左移</li>
 </ul>
 <p>代码实现：</p>
-<pre class="language-none"><code class="language-none">class Solution &#123;
-     public String reverseVowels(String s) &#123;
-        char[] c &#x3D; s.toCharArray();
-        int len &#x3D;c.length;
-        int i&#x3D;0;
-        int j&#x3D;len-1;
-            while (i&lt;j)&#123;
-                while (i&lt;len&amp;&amp;!isVo(c[i]))&#123;
-                    i++;
-                &#125;
-                while (j&gt;0&amp;&amp;!isVo(c[j]))&#123;
-                    j--;
-                &#125;
-                if (i&lt;j)&#123;
-                    char temp&#x3D;c[i];
-                    c[i]&#x3D;c[j];
-                    c[j]&#x3D;temp;
-                    i++;
-                    j--;
-                &#125;
-            &#125;
+<pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Solution</span> <span class="token punctuation">&#123;</span>
+     <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">reverseVowels</span><span class="token punctuation">(</span><span class="token class-name">String</span> s<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">char</span><span class="token punctuation">[</span><span class="token punctuation">]</span> c <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">toCharArray</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> len <span class="token operator">=</span>c<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+        <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> j<span class="token operator">=</span>len<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>len<span class="token operator">&amp;&amp;</span><span class="token operator">!</span><span class="token function">isVo</span><span class="token punctuation">(</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                    i<span class="token operator">++</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">while</span> <span class="token punctuation">(</span>j<span class="token operator">></span><span class="token number">0</span><span class="token operator">&amp;&amp;</span><span class="token operator">!</span><span class="token function">isVo</span><span class="token punctuation">(</span>c<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                    j<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>i<span class="token operator">&lt;</span>j<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+                    <span class="token keyword">char</span> temp<span class="token operator">=</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>c<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                    c<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>temp<span class="token punctuation">;</span>
+                    i<span class="token operator">++</span><span class="token punctuation">;</span>
+                    j<span class="token operator">--</span><span class="token punctuation">;</span>
+                <span class="token punctuation">&#125;</span>
+            <span class="token punctuation">&#125;</span>
 
-        return new String(c);
-    &#125;
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-    &#x2F;&#x2F;判断是否是元音字母
-    public static boolean isVo(char c)&#123;
-        return &quot;aeiouAEIOU&quot;.indexOf(c)&gt;&#x3D;0;
-    &#125;
-&#125;</code></pre>
+    <span class="token comment">//判断是否是元音字母</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">boolean</span> <span class="token function">isVo</span><span class="token punctuation">(</span><span class="token keyword">char</span> c<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token string">"aeiouAEIOU"</span><span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span></code></pre>
 
 
 
